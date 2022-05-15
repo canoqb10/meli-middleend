@@ -2,11 +2,11 @@
 
 This repository is related to technical challenge by Full Stack developer position and it is developed with next technologies:
 
-    *NodeJS with ExpressJS framework
-    *Typescript
-    *Docker
-    *Docker Compose
-    *PostgreSQL
+    * NodeJS with ExpressJS framework
+    * Typescript
+    * Docker
+    * Docker Compose
+    * PostgreSQL
 
 ## Table of Contents
 
@@ -109,6 +109,6 @@ Integration tests suites are configured for this
 
 ## Author
 
-`Jose Alberto Cano Govea`
-`juliojacg@hotmail.com`
-`https://www.linkedin.com/in/jose-alberto-cano-govea-4b882370`
+* Jose Alberto Cano Govea
+* juliojacg@hotmail.com
+* https://www.linkedin.com/in/jose-alberto-cano-govea-4b882370

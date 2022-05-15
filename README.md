@@ -2,11 +2,11 @@
 
 This repository is related to technical challenge by Full Stack developer position and it is developed with next technologies:
 
-    * NodeJS with ExpressJS framework
-    * Typescript
-    * Docker
-    * Docker Compose
-    * PostgreSQL
+  * NodeJS with ExpressJS framework
+  * Typescript
+  * Docker
+  * Docker Compose
+  * PostgreSQL
 
 ## Table of Contents
 

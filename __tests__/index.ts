@@ -1,8 +1,8 @@
 import request from 'supertest'
-import { Response, Express } from 'express'
-// import { Response, Express } from 'express-serve-static-core'
+
 import App from '../server'
 import ItemsController from '../src/api/items/controllers'
+import PurchasesController from '../src/api/purchases/controllers'
 import { apiPort } from '../src/utils'
 
 const URL = '/api/items'
@@ -15,7 +15,7 @@ const itemId = 'MLA928290473'
 let server: any
 
 beforeAll(() => {
-  server = new App([new ItemsController()], apiPort)
+  server = new App([new ItemsController(), new PurchasesController()], apiPort)
 })
 
 describe(`GET ${URL}?search`, () => {

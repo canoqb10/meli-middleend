@@ -1,18 +1,7 @@
 version: '3.8'
 services:
-  api:
-    container_name: meli-middleend
-    restart: always
-    build:
-      context: .
-      dockerfile: 'Dockerfile'
-    ports:
-      - ${API_PORT}:${API_PORT}
-    depends_on:
-      - db
-
   db:
-    container_name: meli-postgresql
+    container_name: meli-postgresql-tests
     image: postgres
     ports:
       - '${DB_PORT}:${DB_PORT}'

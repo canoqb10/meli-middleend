@@ -14,6 +14,7 @@ This repository is related to technical challenge by Full Stack developer positi
 - [Set Up Project](#set-up-project)
 - [Running Application](#running-application)
 - [Testing](#testing)
+- [Cleaning app](#unmount-application)
 - [Author](#author)
 
 ## Folder Structure
@@ -84,9 +85,7 @@ You should be sure that your docker app is to up and running correctly
 
   Executes the next command: 
 
-  * On MacOS `sh run.sh`
-  * On Windows `bash run.sh`
-  * On Linux `sh run.sh`
+  * On your terminal `sh run.sh`
 
 ## Testing
 
@@ -107,6 +106,12 @@ Integration tests suites are configured for this
 
     `npm run test`
 
+## Unmount Application
+
+  It be sure to remove the application that is running. Execute next line
+
+  `npm run unmount`
+  
 ## Author
 
 * Jose Alberto Cano Govea

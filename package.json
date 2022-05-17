@@ -10,13 +10,16 @@
     "dev": "nodemon index.ts",
     "prestart": "npm run build",
     "start": "ts-node index.ts",
-    "test": "jest --silent",
+    "pretest": "docker-compose -f ./__tests__/docker-compose.yml up -d",
+    "posttest": "docker-compose -f ./__tests__/docker-compose.yml down",
+    "test": "jest",
     "test:unit": "jest --watch",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext js",
     "seeds": "ts-node ./seeds.ts",
-    "start:prod": "docker-compose up"
+    "start:prod": "docker-compose up",
+    "unmount": "docker-compose down"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
@@ -63,7 +66,7 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.4.7",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.16",
     "prettier": "2.6.2",
     "supertest": "^6.2.3",

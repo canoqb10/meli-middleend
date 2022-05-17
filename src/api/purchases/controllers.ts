@@ -62,6 +62,10 @@ class PurchasesController {
         throw new BadRequestError('param ID is required')
       }
 
+      if (isNaN(+req.params.id)) {
+        throw new BadRequestError('param ID is required')
+      }
+
       const id = +req.params.id
       const results = await getOneById(id, res)
       console.log('purchase found...')

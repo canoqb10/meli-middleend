@@ -37,7 +37,7 @@ export const errorHandler = (err: PlatformError, req: Request, res: Response) =>
       stack: err?.stack,
     }
 
-    return res.status(500).json(body).end()
+    return res.status(500).send(body)
   }
 
   /**
@@ -63,7 +63,7 @@ export const errorHandler = (err: PlatformError, req: Request, res: Response) =>
       stack: req.url,
     }
 
-    return res.status(500).json(body).end()
+    return res.status(500).send(body)
   }
 
   
@@ -79,7 +79,8 @@ export const errorHandler = (err: PlatformError, req: Request, res: Response) =>
       stack: error?.stack,
     }
 
-    return res.status(error.statusCode).json(body).end()
+    return res.status(error.statusCode).send(body)
+    // return res.status(error.statusCode).json(body).end()
   }
 
   const _error = err as Error
@@ -92,5 +93,5 @@ export const errorHandler = (err: PlatformError, req: Request, res: Response) =>
     stack: _error?.stack,
   }
 
-  return res.status(500).json(body).end()
+  return res.status(500).send(body)
 }

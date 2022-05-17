@@ -10,7 +10,9 @@
     "dev": "nodemon index.ts",
     "prestart": "npm run build",
     "start": "ts-node index.ts",
-    "pretest": "docker-compose -f ./__tests__/docker-compose.yml up -d",
+    "db:test": "docker-compose -f ./__tests__/docker-compose.yml up -d",
+    "postdb:test": "npm run seeds",
+    "pretest": "npm run db:test",
     "posttest": "docker-compose -f ./__tests__/docker-compose.yml down",
     "test": "jest",
     "test:unit": "jest --watch",
@@ -19,7 +21,8 @@
     "lint": "eslint . --ext ts --ext js",
     "seeds": "ts-node ./seeds.ts",
     "start:prod": "docker-compose up",
-    "unmount": "docker-compose down"
+    "unmount": "docker-compose down",
+    "cleaning:test": "docker-compose -f ./__tests__/docker-compose.yml down"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [

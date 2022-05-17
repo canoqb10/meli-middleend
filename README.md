@@ -106,6 +106,9 @@ Integration tests suites are configured for this
 
     `npm run test`
 
+  * Cleaning testing enviroment
+
+    `npm run cleaning:test`
 ## Unmount Application
 
   It be sure to remove the application that is running. Execute next line
